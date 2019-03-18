@@ -275,8 +275,7 @@
         failure:(InstagramFailureBlock)failure
 {
     NSDictionary *params = [self dictionaryWithAccessTokenAndParameters:parameters];
-    NSString *percentageEscapedPath = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
-    [self.httpManager GET:percentageEscapedPath
+    [self.httpManager GET:path
                parameters:params
                  progress:nil
                   success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -299,8 +298,7 @@
                  failure:(InstagramFailureBlock)failure
 {
     NSDictionary *params = [self dictionaryWithAccessTokenAndParameters:parameters];
-    NSString *percentageEscapedPath = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
-    [self.httpManager GET:percentageEscapedPath
+    [self.httpManager GET:path
                parameters:params
                  progress:nil
                   success:^(NSURLSessionDataTask *task, id responseObject) {
